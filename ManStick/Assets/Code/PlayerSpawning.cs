@@ -8,7 +8,17 @@ public class PlayerSpawning : MonoBehaviour
 
     private void Awake()
     {
-        Instantiate(Player1, SpawnPoints[0].position, SpawnPoints[0].rotation);
-        Instantiate(Player2, SpawnPoints[1].position, SpawnPoints[1].rotation);
+
     }
+    public void OnJoinCtr()
+    {
+        Debug.Log("Ctr");
+        Instantiate(Player1, SpawnPoints[0].position, new Quaternion(0, 0, 0, 0));
+    }
+    public void OnJoinKey()
+    {
+        Debug.Log("Key");
+        Instantiate(Player2, SpawnPoints[1].position, new Quaternion(0,0,0,0));
+    }
+
 }
