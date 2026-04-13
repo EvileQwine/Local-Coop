@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(moveInput);
         rb.linearVelocity = moveInput * moveSpeed;
         if (isGrounded)
         {
