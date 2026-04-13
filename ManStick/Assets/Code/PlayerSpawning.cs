@@ -5,20 +5,29 @@ public class PlayerSpawning : MonoBehaviour
 {
     public Transform[] SpawnPoints;
     public GameObject Player1, Player2;
-
+    bool spawnedCtr = false;
+    bool spawnedKey = false;
+    PlayerInput pi;
     private void Awake()
     {
-
+        pi = GetComponent<PlayerInput>();
     }
     public void OnJoinCtr()
     {
-        Debug.Log("Ctr");
-        Instantiate(Player1, SpawnPoints[0].position, new Quaternion(0, 0, 0, 0));
+        if (!spawnedCtr)
+        {
+            spawnedCtr = true;
+            Instantiate(Player1, SpawnPoints[0].position, new Quaternion(0, 0, 0, 0));
+            pi.actions.FindAction("JoinCtr").Disable();
+        } 
     }
     public void OnJoinKey()
     {
-        Debug.Log("Key");
-        Instantiate(Player2, SpawnPoints[1].position, new Quaternion(0,0,0,0));
+        if (!spawnedKey)
+        {
+            spawnedKey = true;
+            Instantiate(Player2, SpawnPoints[1].position, new Quaternion(0, 0, 0, 0));
+            pi.actions.FindAction("JoinKey").Disable();
+        }       
     }
-
 }

@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("awake");
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -37,10 +38,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        Debug.Log("Move");
         moveInput = value.Get<Vector2>();
     }
     private void OnJump()
     {
+        Debug.Log("Jump");
         if (isGrounded)
         {
             rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
