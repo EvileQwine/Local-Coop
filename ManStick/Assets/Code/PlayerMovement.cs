@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    rb.AddForce(moveInput * new Vector2(dashStrength * 10, dashStrength), ForceMode2D.Impulse);
+                    rb.AddForce(moveInput.x * dashStrength * 8, moveInput.y * dashStrength), ForceMode2D.Impulse);
                 }
                 break;
             case JumpAbility.Teleport:
