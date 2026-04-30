@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         Dash,
         Teleport,
     }
+    bool isDashing = false;
     public JumpAbility jumpAbility;
     void Awake()
     {
@@ -24,7 +26,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
+        if (!isDashing)
+        {
+            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
+        }
     }
     void OnMove(InputValue value)
     {
@@ -47,12 +52,26 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    rb.AddForce(moveInput * new Vector2(dashStrength * 10, dashStrength), ForceMode2D.Impulse);
+                    Dashing();
                 }
                 break;
             case JumpAbility.Teleport:
-                rb.position = (rb.position + moveInput);
+                rb.position = (rb.position + moveInput * teleportStrength);
                 break;
         }
+    }
+    IEnumerator Dashing()
+    {
+        isDashing = true;
+        if (moveInput.x > 0)
+        {
+            rb.AddForce(Vector2.right * dashStrength, ForceMode2D.Impulse);
+        }
+        else if (moveInput.x < 0)
+        {
+            rb.AddForce(Vector2.left * -dashStrength, ForceMode2D.Impulse);
+        }
+        yield return new WaitForSeconds(0.5f);
+        isDashing = false;
     }
 }
