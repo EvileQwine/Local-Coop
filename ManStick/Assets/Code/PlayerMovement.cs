@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnJump()
     {
+        rb.linearVelocityY = 0;
         switch (jumpAbility)
         {
             case JumpAbility.Base:
