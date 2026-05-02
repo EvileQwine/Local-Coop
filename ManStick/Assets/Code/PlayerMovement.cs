@@ -37,15 +37,14 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnJump()
     {
-        rb.linearVelocityY = 0;
+        rb.linearVelocityY = 0f;
         switch (jumpAbility)
         {
             case JumpAbility.Base:
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x * 1, rb.linearVelocity.y * 0);
                 rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
                 break;
             case JumpAbility.Dash:
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x * 0, rb.linearVelocity.y * 0);
+                rb.linearVelocityX = 0;
                 if (moveInput.x == 0 && moveInput.y == 0)
                 {
                     rb.AddForce(Vector2.up * dashStrength, ForceMode2D.Impulse);
