@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         Dash,
         Teleport,
     }
-    bool isDashing = false;
+    [SerializeField] bool canMove = false;
     public JumpAbility jumpAbility;
     void Awake()
     {
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (!isDashing)
+        if (canMove)
         {
             rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
         }
@@ -45,33 +45,26 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
                 break;
             case JumpAbility.Dash:
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x * 0, rb.linearVelocity.y * 0);
-                if (moveInput.x == 0 && moveInput.y == 0)
+                rb.linearVelocity = Vector2.zero;
+                if (moveInput == Vector2.zero)
                 {
                     rb.AddForce(Vector2.up * dashStrength, ForceMode2D.Impulse);
                 }
-                else
+                else 
                 {
-                    Dashing();
+                    rb.AddForce(moveInput * dashStrength, ForceMode2D.Impulse);
+                    StartCoroutine(DisableMovement(0.3f));
                 }
                 break;
             case JumpAbility.Teleport:
-                rb.position = (rb.position + moveInput * teleportStrength);
+                rb.position = (rb.position + (moveInput * teleportStrength));
                 break;
         }
     }
-    IEnumerator Dashing()
+    IEnumerator DisableMovement(float f)
     {
-        isDashing = true;
-        if (moveInput.x > 0)
-        {
-            rb.AddForce(Vector2.right * dashStrength, ForceMode2D.Impulse);
-        }
-        else if (moveInput.x < 0)
-        {
-            rb.AddForce(Vector2.left * -dashStrength, ForceMode2D.Impulse);
-        }
-        yield return new WaitForSeconds(0.5f);
-        isDashing = false;
+        canMove = false;
+        yield return new WaitForSeconds(f);
+        canMove = true;
     }
 }
