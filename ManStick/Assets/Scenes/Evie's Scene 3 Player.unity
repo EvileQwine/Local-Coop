@@ -852,22 +852,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player ASD
       objectReference: {fileID: 0}
-    - target: {fileID: 4536983672829783569, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
-      propertyPath: m_GravityScale
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
-      propertyPath: jumpHeight
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
-      propertyPath: dashStrength
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
-      propertyPath: teleportStrength
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 5623686954550627850, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.6
