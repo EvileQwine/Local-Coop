@@ -17,7 +17,7 @@ public class HeadRotation : MonoBehaviour
     [SerializeField] GameObject Bullet;
     [SerializeField] float bulletSpeed = 1.0f;
     bool controllerActive = false;
-    float rotationSpeed = 100;
+    float rotationSpeed = 1000000;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,7 +32,7 @@ public class HeadRotation : MonoBehaviour
 
     void OnAttack()
     {
-        Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, transform.rotation).GetComponent<Rigidbody2D>();
+        Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
         playerBullet.AddForce(transform.up * (bulletSpeed), ForceMode2D.Impulse);
     }
 
