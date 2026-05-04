@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D rb;
+    Rigidbody2D[] rb;
     Vector2 moveInput;
     [SerializeField] int moveSpeed = 10;
     [SerializeField] int jumpHeight = 150;
@@ -22,13 +22,16 @@ public class PlayerMovement : MonoBehaviour
     public JumpAbility jumpAbility;
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponentsInChildren<Rigidbody2D>();
     }
     void Update()
     {
         if (canMove)
         {
-            rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocityY);
+            for (int i = 0; i < rb.Length; i++)
+            {
+                rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
+            }
         }
     }
     void OnMove(InputValue value)
@@ -37,27 +40,48 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnJump()
     {
-        rb.linearVelocity = Vector2.zero;
+        for (int i = 0;i < rb.Length; i++)
+        {
+            rb[i].linearVelocity = Vector2.zero;
+        }
         switch (jumpAbility)
         {
             case JumpAbility.Base:
-                rb.linearVelocity = Vector2.zero;
-                rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                for (int i = 0; i < rb.Length; i++)
+                {
+                    rb[i].linearVelocity = Vector2.zero;
+                }
+                for (int i = 0; i < rb.Length; i++)
+                {
+                    rb[i].AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                }
                 break;
             case JumpAbility.Dash:
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x * 0, rb.linearVelocity.y * 0);
+                for (int i = 0; i < rb.Length; i++)
+                {
+                    rb[i].linearVelocity = Vector2.zero;
+                }
                 if (moveInput.x == 0 && moveInput.y == 0)
                 {
-                    rb.AddForce(Vector2.up * dashStrength, ForceMode2D.Impulse);
+                    for (int i = 0; i < rb.Length; i++)
+                    {
+                        rb[i].AddForce(Vector2.up * dashStrength, ForceMode2D.Impulse);
+                    }
                 }
                 else 
                 {
-                    rb.AddForce(moveInput * dashStrength, ForceMode2D.Impulse);
+                    for (int i = 0; i < rb.Length; i++)
+                    {
+                        rb[i].AddForce(moveInput * dashStrength, ForceMode2D.Impulse);
+                    }
                     StartCoroutine(DisableMovement(0.3f));
                 }
                 break;
             case JumpAbility.Teleport:
-                rb.position = (rb.position + (moveInput * teleportStrength));
+                for (int i = 0; i < rb.Length; i++)
+                {
+                    rb[i].position = (rb[i].position + (moveInput * teleportStrength));
+                }
                 break;
         }
     }
