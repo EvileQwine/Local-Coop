@@ -1618,7 +1618,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.03127795, g: 0.56139004, b: 0.7207546, a: 0}
+  m_BackGroundColor: {r: 0.3137255, g: 0.49019608, b: 0.8862745, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 1032109162}
   - component: {fileID: 1032109161}
   m_Layer: 3
-  m_Name: Keyboard Health
+  m_Name: '"Blue Health"'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2204,7 +2204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -832.3, y: 527.9}
+  m_AnchoredPosition: {x: -798.1875, y: 527.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032109161
@@ -2227,7 +2227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Keyboard Health
+  m_text: 'Blue Health
 
 
 '
@@ -4189,7 +4189,7 @@ GameObject:
   - component: {fileID: 1974339015}
   - component: {fileID: 1974339014}
   m_Layer: 3
-  m_Name: Controller Health
+  m_Name: '"Red Health"'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4211,7 +4211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 680.1, y: 527.9}
+  m_AnchoredPosition: {x: 723.9375, y: 527.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974339014
@@ -4234,7 +4234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Controller Health
+  m_text: 'Red Health
 
 
 '
