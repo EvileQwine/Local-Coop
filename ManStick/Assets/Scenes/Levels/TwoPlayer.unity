@@ -242,6 +242,7 @@ Transform:
   - {fileID: 303906101}
   - {fileID: 1219318636}
   - {fileID: 1296654664}
+  - {fileID: 811479389}
   m_Father: {fileID: 1653080919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &128838578
@@ -323,6 +324,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &211341797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+  m_PrefabInstance: {fileID: 274032183}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &211341804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211341797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0d5b4b20224e345b8498fc1791bc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthScript
+  healthbarSlider: {fileID: 1058345775}
+  maxHealth: 5
+  currHealth: 0
 --- !u!1001 &274032183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,9 +352,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1899101156}
     m_Modifications:
+    - target: {fileID: 1878870491412288359, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.3172
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
       propertyPath: m_LocalPosition.y
@@ -371,18 +396,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3854784005077231341, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4124106187396441853, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
       propertyPath: m_Name
       value: Keyboard dude
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041027447273093652, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5573710735200542749, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
       propertyPath: healthbarSlider
       value: 
       objectReference: {fileID: 1058345775}
+    - target: {fileID: 5772281252357221212, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6197880009757549794, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817699930201672257, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8791524892777780301, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 211341804}
   m_SourcePrefab: {fileID: 100100000, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
 --- !u!1 &287297838
 GameObject:
@@ -1430,7 +1482,7 @@ RectTransform:
   - {fileID: 1916873596}
   - {fileID: 1032109160}
   - {fileID: 1974339013}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 67545469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2315,7 +2367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.6828
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2376,7 +2428,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1732208867}
   m_SourcePrefab: {fileID: 100100000, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
 --- !u!4 &1053676505 stripped
 Transform:
@@ -3713,6 +3768,26 @@ Transform:
   - {fileID: 67545469}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1732208860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
+  m_PrefabInstance: {fileID: 1053676504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1732208867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732208860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0d5b4b20224e345b8498fc1791bc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthScript
+  healthbarSlider: {fileID: 474386466}
+  maxHealth: 5
+  currHealth: 0
 --- !u!1 &1780314929
 GameObject:
   m_ObjectHideFlags: 0
@@ -4249,5 +4324,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 863894952}
   - {fileID: 1653080919}
-  - {fileID: 811479389}
   - {fileID: 128838581}
