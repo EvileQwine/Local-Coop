@@ -33,7 +33,16 @@ public class HeadRotation : MonoBehaviour
     void OnAttack()
     {
         Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
-        playerBullet.AddForce(transform.up * (bulletSpeed), ForceMode2D.Impulse);
+        if (!controllerActive)
+        {
+            playerBullet.AddForce(direction.normalized * (bulletSpeed), ForceMode2D.Impulse);
+            rbHead.AddForce(-(direction.normalized * bulletSpeed), ForceMode2D.Impulse);
+        }
+        else if (Dircetion != Vector2.zero)
+        {
+            playerBullet.AddForce(Dircetion.normalized * (bulletSpeed), ForceMode2D.Impulse);
+            rbHead.AddForce(-(Dircetion.normalized * bulletSpeed), ForceMode2D.Impulse);
+        }
     }
 
 

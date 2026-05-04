@@ -3674,7 +3674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4335059558289910873, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
@@ -3698,7 +3698,7 @@ PrefabInstance:
       objectReference: {fileID: 1058345775}
     - target: {fileID: 5293308484208209638, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3779,6 +3779,10 @@ PrefabInstance:
       propertyPath: 'jumpCooldowns.Array.data[2]'
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4335059558289910873, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Evie patent (1)
@@ -3799,6 +3803,10 @@ PrefabInstance:
       propertyPath: healthbarSlider
       value: 
       objectReference: {fileID: 474386466}
+    - target: {fileID: 5293308484208209638, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.5

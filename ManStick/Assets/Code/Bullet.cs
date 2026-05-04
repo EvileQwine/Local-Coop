@@ -8,23 +8,25 @@ using UnityEngine.InputSystem;
 public class Bullet : MonoBehaviour
 {
     HealthScript healthScript;
-    Collider2D collider;
+    Collider2D c;
+    [SerializeField] float bulletDespawnTime = 2.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        collider = GetComponent<Collider2D>();
-        collider.enabled = false;
+        c = GetComponent<Collider2D>();
+        c.enabled = false;
         StartCoroutine(Collider());
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<HealthScript>() != null)
         {
             collision.gameObject.GetComponent<HealthScript>().Hit(1);
         }
-        Destroy(gameObject);
+        StartCoroutine(BulletTime());
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +35,12 @@ public class Bullet : MonoBehaviour
     IEnumerator Collider()
     {
         yield return new WaitForSeconds(0.2f);
-        collider.enabled = true;
+        c.enabled = true;
+    }
+
+    IEnumerator BulletTime()
+    {
+        yield return new WaitForSeconds(bulletDespawnTime);
+        Destroy(gameObject);
     }
 }

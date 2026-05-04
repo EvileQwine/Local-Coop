@@ -1081,6 +1081,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeadRotation
   Head: {fileID: 5293308484208209638}
+  Gun: {fileID: 4389542564636634336, guid: 2d770cde79787eb48af88955cccae511, type: 3}
+  Bullet: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
+  bulletSpeed: 1
 --- !u!1 &7599888718437478888
 GameObject:
   m_ObjectHideFlags: 0
