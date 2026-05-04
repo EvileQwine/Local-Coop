@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         switch (jumpAbility)
         {
             case JumpAbility.Base:
+                rb.linearVelocity = Vector2.zero;
                 rb.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
                 break;
             case JumpAbility.Dash:

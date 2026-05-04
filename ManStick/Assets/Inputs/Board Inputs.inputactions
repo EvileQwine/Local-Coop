@@ -25,15 +25,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Look",
-                    "type": "PassThrough",
-                    "id": "34b04410-2c74-473d-8afb-ae3838bda7dc",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Point",
                     "type": "PassThrough",
                     "id": "56e225d8-b885-4bb9-8979-f10ec8266d0d",
@@ -118,17 +109,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "19937987-3e81-4734-bba1-ad0e37f52c04",
-                    "path": "<Pointer>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse;Touch",
-                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
