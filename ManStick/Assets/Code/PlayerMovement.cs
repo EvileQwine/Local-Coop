@@ -8,17 +8,17 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     Vector2 moveInput;
-    [SerializeField] int moveSpeed = 2;
-    [SerializeField] int jumpHeight = 6;
-    [SerializeField] int dashStrength = 10;
-    [SerializeField] int teleportStrength = 10;
+    [SerializeField] int moveSpeed = 10;
+    [SerializeField] int jumpHeight = 150;
+    [SerializeField] int dashStrength = 150;
+    [SerializeField] int teleportStrength = 150;
     [SerializeField] public enum JumpAbility
     {
         Base,
         Dash,
         Teleport,
     }
-    [SerializeField] bool canMove = false;
+    [SerializeField] bool canMove = true;
     public JumpAbility jumpAbility;
     void Awake()
     {
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnJump()
     {
-        rb.linearVelocityY = 0f;
+        rb.linearVelocity = Vector2.zero;
         switch (jumpAbility)
         {
             case JumpAbility.Base:
