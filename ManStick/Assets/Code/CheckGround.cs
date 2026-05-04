@@ -20,8 +20,8 @@ public class CheckGround : MonoBehaviour
     void Update()
     {
         if (rb.IsTouching(groundFilter) && !canPlayerJump)
-            Debug.Log("blej");
         {
+            Debug.Log("blej");
             canPlayerJump = true;
         }
     }

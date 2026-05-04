@@ -3195,6 +3195,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342891663}
   m_CullTransparentMesh: 1
+--- !u!1 &1554603475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335059558289910873, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+  m_PrefabInstance: {fileID: 1666433207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1598072151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3671,6 +3676,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evie patent
       objectReference: {fileID: 0}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 1554603475}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
     - target: {fileID: 4930076075830278818, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: healthbarSlider
       value: 
@@ -3758,6 +3771,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evie patent (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Gun
+      value: 
+      objectReference: {fileID: 1911906460}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
     - target: {fileID: 4930076075830278818, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: healthbarSlider
       value: 
@@ -4037,6 +4058,11 @@ Transform:
   - {fileID: 437313018}
   m_Father: {fileID: 1653080919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1911906460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4335059558289910873, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+  m_PrefabInstance: {fileID: 1701335178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1916873595
 GameObject:
   m_ObjectHideFlags: 0
