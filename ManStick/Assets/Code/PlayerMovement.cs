@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     }
     [SerializeField] float[] jumpCooldowns = new float[3] { 2, 3, 2 };
     [SerializeField] bool canMove = true;
-    [SerializeField] bool canJump = true;
+    [SerializeField] public bool canJump = true;
     public JumpAbility jumpAbility;
     void Awake()
     {

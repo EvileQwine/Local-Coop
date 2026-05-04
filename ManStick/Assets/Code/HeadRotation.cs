@@ -7,23 +7,33 @@ using UnityEngine.UIElements;
 using Unity.Mathematics;
 public class HeadRotation : MonoBehaviour
 {
-    Rigidbody2D rb;
     Vector2 Dircetion;
     float targetAngle;
     Vector2 direction;
     Vector2 mousePosistion;
+    Rigidbody2D rbHead;
+    [SerializeField] GameObject Head;
+    [SerializeField] GameObject Gun;
+    [SerializeField] GameObject Bullet;
+    [SerializeField] float bulletSpeed = 1.0f;
     bool controllerActive = false;
     float rotationSpeed = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rbHead = Head.GetComponent<Rigidbody2D>();
     }
 
    
     void OnLook(InputValue value)
     {
         Dircetion = value.Get<Vector2>();
+    }
+
+    void OnAttack()
+    {
+        Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, transform.rotation).GetComponent<Rigidbody2D>();
+        playerBullet.AddForce(transform.up * (bulletSpeed), ForceMode2D.Impulse);
     }
 
 
@@ -44,14 +54,14 @@ public class HeadRotation : MonoBehaviour
         {
             mousePosistion = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-            direction = new Vector2(mousePosistion.x - rb.position.x, mousePosistion.y - rb.position.y);
+            direction = new Vector2(mousePosistion.x - rbHead.position.x, mousePosistion.y - rbHead.position.y);
 
             targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         }
-        float rotation = Mathf.MoveTowardsAngle(rb.rotation, targetAngle - 90, rotationSpeed * Time.fixedDeltaTime);
+        float rotation = Mathf.MoveTowardsAngle(rbHead.rotation, targetAngle - 90, rotationSpeed * Time.fixedDeltaTime);
 
-        rb.MoveRotation(rotation);
+        rbHead.MoveRotation(rotation);
     }
 
 

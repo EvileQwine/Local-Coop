@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37940348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1904900903601260993, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+  m_PrefabInstance: {fileID: 1666433207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &37940355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37940348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 8
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &62964877
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +161,7 @@ GameObject:
   - component: {fileID: 62964878}
   - component: {fileID: 62964880}
   - component: {fileID: 62964879}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 67545469}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms etc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 287297839}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +402,7 @@ GameObject:
   - component: {fileID: 303906101}
   - component: {fileID: 303906102}
   - component: {fileID: 303906103}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +539,7 @@ GameObject:
   - component: {fileID: 343841581}
   - component: {fileID: 343841583}
   - component: {fileID: 343841582}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +614,7 @@ GameObject:
   - component: {fileID: 352069941}
   - component: {fileID: 352069942}
   - component: {fileID: 352069943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +751,7 @@ GameObject:
   - component: {fileID: 371773045}
   - component: {fileID: 371773046}
   - component: {fileID: 371773047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Smol platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,6 +939,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4228417027085028030, guid: 3e9db03a76d7a564da26e1108afb08d0, type: 3}
   m_PrefabInstance: {fileID: 410235471}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &437313018 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+  m_PrefabInstance: {fileID: 1701335178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &460636193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -980,7 +1016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 474386465}
   - component: {fileID: 474386466}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthbarSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1071,7 +1107,7 @@ GameObject:
   - component: {fileID: 490990659}
   - component: {fileID: 490990661}
   - component: {fileID: 490990660}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1182,7 @@ GameObject:
   - component: {fileID: 585777475}
   - component: {fileID: 585777476}
   - component: {fileID: 585777477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,6 +1308,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &725685501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2029059696331814332, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+  m_PrefabInstance: {fileID: 1666433207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &725685510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725685501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 8
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &811479385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1351,7 @@ GameObject:
   - component: {fileID: 811479388}
   - component: {fileID: 811479387}
   - component: {fileID: 811479386}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1455,7 @@ GameObject:
   - component: {fileID: 816651923}
   - component: {fileID: 816651924}
   - component: {fileID: 816651925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1662,7 +1729,7 @@ GameObject:
   - component: {fileID: 876092640}
   - component: {fileID: 876092641}
   - component: {fileID: 876092642}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1799,7 +1866,7 @@ GameObject:
   - component: {fileID: 912786074}
   - component: {fileID: 912786075}
   - component: {fileID: 912786076}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1936,7 +2003,7 @@ GameObject:
   - component: {fileID: 938641633}
   - component: {fileID: 938641634}
   - component: {fileID: 938641635}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 949123669}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2114,7 +2181,7 @@ GameObject:
   - component: {fileID: 1032109160}
   - component: {fileID: 1032109162}
   - component: {fileID: 1032109161}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Keyboard Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2242,95 +2309,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032109159}
   m_CullTransparentMesh: 1
---- !u!1001 &1053676504
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1899101156}
-    m_Modifications:
-    - target: {fileID: 2164346982936496088, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2164346982936496088, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.673149
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124106187396441853, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_Name
-      value: Controller dude
-      objectReference: {fileID: 0}
-    - target: {fileID: 4784787588764071882, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_Actions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: bb5ada5b09a2f0441b5cae3551dd0b3a, type: 3}
-    - target: {fileID: 4784787588764071882, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: m_Name
-      value: Player CTR
-      objectReference: {fileID: 0}
-    - target: {fileID: 5573710735200542749, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      propertyPath: healthbarSlider
-      value: 
-      objectReference: {fileID: 474386466}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1732208867}
-  m_SourcePrefab: {fileID: 100100000, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
---- !u!4 &1053676505 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2330600130642304922, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-  m_PrefabInstance: {fileID: 1053676504}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1058345773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,7 +2319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1058345774}
   - component: {fileID: 1058345775}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthbarSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2432,7 +2410,7 @@ GameObject:
   - component: {fileID: 1080414611}
   - component: {fileID: 1080414613}
   - component: {fileID: 1080414612}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2507,7 +2485,7 @@ GameObject:
   - component: {fileID: 1098393678}
   - component: {fileID: 1098393679}
   - component: {fileID: 1098393680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2644,7 +2622,7 @@ GameObject:
   - component: {fileID: 1101970185}
   - component: {fileID: 1101970186}
   - component: {fileID: 1101970187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2779,7 +2757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1163947136}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2817,7 +2795,7 @@ GameObject:
   - component: {fileID: 1219318636}
   - component: {fileID: 1219318637}
   - component: {fileID: 1219318638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2954,7 +2932,7 @@ GameObject:
   - component: {fileID: 1296654664}
   - component: {fileID: 1296654665}
   - component: {fileID: 1296654666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3153,7 +3131,7 @@ GameObject:
   - component: {fileID: 1342891664}
   - component: {fileID: 1342891666}
   - component: {fileID: 1342891665}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3290,7 +3268,7 @@ GameObject:
   - component: {fileID: 1600185187}
   - component: {fileID: 1600185189}
   - component: {fileID: 1600185188}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,7 +3343,7 @@ GameObject:
   - component: {fileID: 1647877718}
   - component: {fileID: 1647877719}
   - component: {fileID: 1647877720}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Smol platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3502,7 +3480,7 @@ GameObject:
   - component: {fileID: 1652750368}
   - component: {fileID: 1652750369}
   - component: {fileID: 1652750370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Smol platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3669,6 +3647,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1899101156}
     m_Modifications:
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: dashStrength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: teleportStrength
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: 'jumpCooldowns.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: 'jumpCooldowns.Array.data[1]'
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: 'jumpCooldowns.Array.data[2]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Evie patent
@@ -3721,50 +3719,118 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3231074682465959283, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 1904900903601260993, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 37940355}
+    - targetCorrespondingSourceObject: {fileID: 2029059696331814332, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1666433209}
+      addedObject: {fileID: 725685510}
   m_SourcePrefab: {fileID: 100100000, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
---- !u!1 &1666433208 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3231074682465959283, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-  m_PrefabInstance: {fileID: 1666433207}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1666433209
-MonoBehaviour:
+--- !u!1001 &1701335178
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666433208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f95e8ad80066f345af42b171cc01cd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  jumpTimer: {fileID: 0}
-  maxTime: 1
-  minTime: 0
---- !u!1 &1732208860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5025417005481303878, guid: e5d5d53030985c5489c516b52d73f112, type: 3}
-  m_PrefabInstance: {fileID: 1053676504}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1732208867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1732208860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f0d5b4b20224e345b8498fc1791bc39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthScript
-  healthbarSlider: {fileID: 474386466}
-  maxHealth: 5
-  currHealth: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1899101156}
+    m_Modifications:
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: dashStrength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: teleportStrength
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: 'jumpCooldowns.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: 'jumpCooldowns.Array.data[1]'
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: 'jumpCooldowns.Array.data[2]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Name
+      value: Evie patent (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930076075830278818, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: healthbarSlider
+      value: 
+      objectReference: {fileID: 474386466}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.2207947
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138817812900317715, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: bb5ada5b09a2f0441b5cae3551dd0b3a, type: 3}
+    - target: {fileID: 8138817812900317715, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138817812900317715, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602866459897619949, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602866459897619949, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.06629649
+      objectReference: {fileID: 0}
+    - target: {fileID: 8602866459897619949, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
 --- !u!1 &1780314929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,7 +3840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780314930}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3812,7 +3878,7 @@ GameObject:
   - component: {fileID: 1878213123}
   - component: {fileID: 1878213124}
   - component: {fileID: 1878213125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: smol platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3968,7 +4034,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 941531932}
-  - {fileID: 1053676505}
+  - {fileID: 437313018}
   m_Father: {fileID: 1653080919}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916873595
@@ -3983,7 +4049,7 @@ GameObject:
   - component: {fileID: 1916873599}
   - component: {fileID: 1916873598}
   - component: {fileID: 1916873597}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Healthbar Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,7 +4138,7 @@ GameObject:
   - component: {fileID: 1974339013}
   - component: {fileID: 1974339015}
   - component: {fileID: 1974339014}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Controller Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4212,7 +4278,7 @@ GameObject:
   - component: {fileID: 2143197808}
   - component: {fileID: 2143197807}
   - component: {fileID: 2143197806}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Healthbar Keyboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
