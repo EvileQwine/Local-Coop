@@ -139,7 +139,11 @@ PrefabInstance:
     - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: Bullet
       value: 
-      objectReference: {fileID: 6494752841871644880}
+      objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: bulletSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -955,11 +959,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
---- !u!1 &6494752841871644880 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
-  m_PrefabInstance: {fileID: 6494752841871644879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
