@@ -4,12 +4,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using Unity.Mathematics;
 public class HeadRotation : MonoBehaviour
 {
     Rigidbody2D rb;
     Vector2 Dircetion;
     float targetAngle;
     Vector2 direction;
+    Vector2 mousePosistion;
+    bool controllerActive = false;
     float rotationSpeed = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,17 +24,15 @@ public class HeadRotation : MonoBehaviour
     void OnLook(InputValue value)
     {
         Dircetion = value.Get<Vector2>();
-        Debug.Log("Test");
     }
-    void OnJump(InputValue value)
-    {
-        Debug.Log("Test");
-    }
+
+
     // Update is called once per frame
     void Update()
     {
         if (Dircetion != Vector2.zero)
         {
+            controllerActive = true;
             targetAngle = Mathf.Atan2(Dircetion.y, Dircetion.x) * Mathf.Rad2Deg;
         }
 
@@ -39,9 +40,15 @@ public class HeadRotation : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!controllerActive)
+        {
+            mousePosistion = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-        //direction = new Vector2(Dircetion.x - rb.position.x, Dircetion.y - rb.position.y);
+            direction = new Vector2(mousePosistion.x - rb.position.x, mousePosistion.y - rb.position.y);
 
+            targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        }
         float rotation = Mathf.MoveTowardsAngle(rb.rotation, targetAngle - 90, rotationSpeed * Time.fixedDeltaTime);
 
         rb.MoveRotation(rotation);
