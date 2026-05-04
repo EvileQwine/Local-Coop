@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7322610636475651413}
   - component: {fileID: 9040766009202210849}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Smol platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,34 +4,45 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using Unity.Mathematics;
 public class HeadRotation : MonoBehaviour
 {
-    Rigidbody2D rb;
     Vector2 Dircetion;
     float targetAngle;
     Vector2 direction;
+    Vector2 mousePosistion;
+    Rigidbody2D rbHead;
+    [SerializeField] GameObject Head;
+    [SerializeField] GameObject Gun;
+    [SerializeField] GameObject Bullet;
+    [SerializeField] float bulletSpeed = 1.0f;
+    bool controllerActive = false;
     float rotationSpeed = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rbHead = Head.GetComponent<Rigidbody2D>();
     }
 
    
     void OnLook(InputValue value)
     {
         Dircetion = value.Get<Vector2>();
-        Debug.Log("Test");
     }
-    void OnJump(InputValue value)
+
+    void OnAttack()
     {
-        Debug.Log("Test");
+        Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, transform.rotation).GetComponent<Rigidbody2D>();
+        playerBullet.AddForce(transform.up * (bulletSpeed), ForceMode2D.Impulse);
     }
+
+
     // Update is called once per frame
     void Update()
     {
         if (Dircetion != Vector2.zero)
         {
+            controllerActive = true;
             targetAngle = Mathf.Atan2(Dircetion.y, Dircetion.x) * Mathf.Rad2Deg;
         }
 
@@ -39,12 +50,18 @@ public class HeadRotation : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!controllerActive)
+        {
+            mousePosistion = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-        //direction = new Vector2(Dircetion.x - rb.position.x, Dircetion.y - rb.position.y);
+            direction = new Vector2(mousePosistion.x - rbHead.position.x, mousePosistion.y - rbHead.position.y);
 
-        float rotation = Mathf.MoveTowardsAngle(rb.rotation, targetAngle - 90, rotationSpeed * Time.fixedDeltaTime);
+            targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        rb.MoveRotation(rotation);
+        }
+        float rotation = Mathf.MoveTowardsAngle(rbHead.rotation, targetAngle - 90, rotationSpeed * Time.fixedDeltaTime);
+
+        rbHead.MoveRotation(rotation);
     }
 
 
