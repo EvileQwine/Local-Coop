@@ -1359,6 +1359,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player ASD
       objectReference: {fileID: 0}
+    - target: {fileID: 4536983672829783569, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      propertyPath: jumpHeight
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5623686954550627850, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -1406,13 +1414,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2500004292548318991, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5573710735200542749}
   m_SourcePrefab: {fileID: 100100000, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
 --- !u!4 &2956415182145701443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5623686954550627850, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
   m_PrefabInstance: {fileID: 7425330280575060041}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5025417005481303878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2500004292548318991, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+  m_PrefabInstance: {fileID: 7425330280575060041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5573710735200542749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025417005481303878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0d5b4b20224e345b8498fc1791bc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthScript
+  healthbarSlider: {fileID: 0}
+  maxHealth: 5
+  currHealth: 5
 --- !u!50 &6483644217387443800 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4536983672829783569, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
