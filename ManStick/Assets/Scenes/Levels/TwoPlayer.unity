@@ -3672,6 +3672,10 @@ PrefabInstance:
       propertyPath: 'jumpCooldowns.Array.data[2]'
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4335059558289910873, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Evie patent
@@ -3684,10 +3688,18 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4930076075830278818, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: healthbarSlider
       value: 
       objectReference: {fileID: 1058345775}
+    - target: {fileID: 5293308484208209638, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.3172
@@ -3779,6 +3791,10 @@ PrefabInstance:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
+    - target: {fileID: 4811953580404548706, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4930076075830278818, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: healthbarSlider
       value: 

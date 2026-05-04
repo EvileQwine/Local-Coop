@@ -1,4 +1,9 @@
+using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using System.Security.Cryptography;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 
 public class Bullet : MonoBehaviour
 {
@@ -8,6 +13,8 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         collider = GetComponent<Collider2D>();
+        collider.enabled = false;
+        StartCoroutine(Collider());
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -18,10 +25,14 @@ public class Bullet : MonoBehaviour
         }
         Destroy(gameObject);
     }
-
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    IEnumerator Collider()
+    {
+        yield return new WaitForSeconds(0.2f);
+        collider.enabled = true;
     }
 }
