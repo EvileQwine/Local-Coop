@@ -17,8 +17,8 @@ public class Balancescript : MonoBehaviour
         rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRoatation, force * Time.fixedDeltaTime));
     }
 
-    void OnJump()
-    {
-        rb.linearVelocityY = 0f;
-    }
+    //void OnJump()
+    //{
+    //    rb.linearVelocityY = 0f;
+    //}
 }

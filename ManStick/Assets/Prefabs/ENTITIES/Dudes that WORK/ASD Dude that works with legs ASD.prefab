@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1878870491412288359}
   - component: {fileID: 2864819429218966584}
   - component: {fileID: 3034426556672217135}
+  - component: {fileID: 5708176747797038518}
   m_Layer: 0
   m_Name: Left Uper Leg
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2442984509151349501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.688, y: -2.5, z: 0}
+  m_LocalPosition: {x: -0.25, y: -2.5, z: 0}
   m_LocalScale: {x: 0.625, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -172,7 +173,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0.34375143, y: 0.6376045}
+  m_Anchor: {x: 0.24455109, y: 0.6376045}
   m_ConnectedAnchor: {x: -0.19431114, y: -0.46559888}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
@@ -183,6 +184,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -10
     m_UpperAngle: 100
+--- !u!114 &5708176747797038518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442984509151349501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9438b6ea56b770d41902e53b3c4c9f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Balancescript
 --- !u!1 &2689059082282372607
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +209,7 @@ GameObject:
   - component: {fileID: 5041027447273093652}
   - component: {fileID: 2944845879360952767}
   - component: {fileID: 7102520310618593931}
+  - component: {fileID: 2443615559933395923}
   m_Layer: 0
   m_Name: Right Uper Leg
   m_TagString: Untagged
@@ -212,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 2689059082282372607}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.313, y: -2.5, z: 0}
+  m_LocalPosition: {x: 0.25, y: -2.5, z: 0}
   m_LocalScale: {x: 0.625, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,7 +370,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.21746431, y: 0.6376045}
-  m_ConnectedAnchor: {x: 0.35416925, y: -0.46559888}
+  m_ConnectedAnchor: {x: 0.2281696, y: -0.46559888}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -366,6 +380,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 80
     m_UpperAngle: 180
+--- !u!114 &2443615559933395923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689059082282372607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9438b6ea56b770d41902e53b3c4c9f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Balancescript
 --- !u!1 &2693644359514718900
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +405,7 @@ GameObject:
   - component: {fileID: 8791524892777780301}
   - component: {fileID: 5398516729124871032}
   - component: {fileID: 2711826293578173216}
+  - component: {fileID: 5848135495361554723}
   m_Layer: 0
   m_Name: Capsule (3)
   m_TagString: Untagged
@@ -395,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 2693644359514718900}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.499, y: -4, z: 0}
+  m_LocalPosition: {x: -0.5, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -549,6 +576,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -100
     m_UpperAngle: 10
+--- !u!114 &5848135495361554723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693644359514718900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9438b6ea56b770d41902e53b3c4c9f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Balancescript
 --- !u!1 &4124106187396441853
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +656,7 @@ Transform:
   m_GameObject: {fileID: 5183190961963050811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 21.8, y: 0, z: 0}
+  m_LocalPosition: {x: 1.8, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -809,7 +848,7 @@ Transform:
   m_GameObject: {fileID: 6593652729801694941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1001,7 +1040,7 @@ Transform:
   m_GameObject: {fileID: 6889834574847845909}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 18.2, y: 0, z: 0}
+  m_LocalPosition: {x: -1.8, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1177,6 +1216,7 @@ GameObject:
   - component: {fileID: 6197880009757549794}
   - component: {fileID: 2402342303078557131}
   - component: {fileID: 9219743389552656427}
+  - component: {fileID: 7338868374585843348}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -1193,7 +1233,7 @@ Transform:
   m_GameObject: {fileID: 8692789331833343904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.5, y: -4, z: 0}
+  m_LocalPosition: {x: 0.5, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1347,6 +1387,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -10
     m_UpperAngle: 100
+--- !u!114 &7338868374585843348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692789331833343904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9438b6ea56b770d41902e53b3c4c9f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Balancescript
 --- !u!1001 &7425330280575060041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1360,11 +1412,23 @@ PrefabInstance:
       value: Player ASD
       objectReference: {fileID: 0}
     - target: {fileID: 4536983672829783569, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536983672829783569, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_GravityScale
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: jumpHeight
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469650118098502950, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      propertyPath: dashStrength
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5623686954550627850, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
@@ -1373,7 +1437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5623686954550627850, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5623686954550627850, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1417,7 +1481,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2500004292548318991, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5573710735200542749}
+      addedObject: {fileID: 5046218196277708060}
   m_SourcePrefab: {fileID: 100100000, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
 --- !u!4 &2956415182145701443 stripped
 Transform:
@@ -1429,7 +1493,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2500004292548318991, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
   m_PrefabInstance: {fileID: 7425330280575060041}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5573710735200542749
+--- !u!114 &5046218196277708060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1438,12 +1502,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025417005481303878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f0d5b4b20224e345b8498fc1791bc39, type: 3}
+  m_Script: {fileID: 11500000, guid: 9438b6ea56b770d41902e53b3c4c9f71, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthScript
-  healthbarSlider: {fileID: 0}
-  maxHealth: 5
-  currHealth: 5
+  m_EditorClassIdentifier: Assembly-CSharp::Balancescript
 --- !u!50 &6483644217387443800 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4536983672829783569, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
