@@ -1,13 +1,16 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
-    public float startHealth = 5;
+    public Slider healthbarSlider;
+    public float maxHealth = 5;
     public float currHealth;
 
     void Start()
     {
-        currHealth = startHealth;
+        currHealth = maxHealth;
     }
 
     private void Update()
@@ -16,6 +19,9 @@ public class HealthScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        healthbarSlider.value = currHealth;
+        healthbarSlider.maxValue = maxHealth;
     }
 
     public void Hit(int amount)
