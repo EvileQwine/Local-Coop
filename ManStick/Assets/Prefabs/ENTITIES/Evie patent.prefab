@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 3027214635695911020}
   - component: {fileID: 6265156270643574261}
   - component: {fileID: 3037215237139831250}
+  - component: {fileID: 521446114131489666}
   - component: {fileID: 5790006277837766955}
   - component: {fileID: 8478792330052337373}
   m_Layer: 0
@@ -546,6 +547,32 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &521446114131489666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904900903601260993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 8
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!233 &5790006277837766955
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -598,6 +625,7 @@ GameObject:
   - component: {fileID: 3099139337870822761}
   - component: {fileID: 1429270884874111913}
   - component: {fileID: 3267141464997488284}
+  - component: {fileID: 3755571535821400888}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -780,6 +808,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9438b6ea56b770d41902e53b3c4c9f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Balancescript
+--- !u!114 &3755571535821400888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029059696331814332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 8
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &2809600131277345598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,9 +1111,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 10
   jumpHeight: 40
-  dashStrength: 40
-  teleportStrength: 40
+  dashStrength: 50
+  teleportStrength: 15
+  jumpCooldowns:
+  - 1
+  - 1.2
+  - 1
   canMove: 1
+  canJump: 1
   jumpAbility: 0
 --- !u!1 &7599888718437478888
 GameObject:
@@ -1591,7 +1650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f0d5b4b20224e345b8498fc1791bc39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthScript
-  startHealth: 5
+  healthbarSlider: {fileID: 0}
+  maxHealth: 5
   currHealth: 0
 --- !u!50 &3499371103269897325 stripped
 Rigidbody2D:
