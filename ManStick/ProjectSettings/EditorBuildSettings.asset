@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Multiplayer.unity
     guid: ed3dc1ab26afbeb43b161f91af6f65ee
   - enabled: 1
-    path: Assets/Scenes/Levels/TwoPlayer.unity
+    path: Assets/Scenes/Levels/BasicTwoPlayer.unity
     guid: e731324a1efee3641811cc86b0506eef
   - enabled: 1
     path: Assets/Scenes/Levels/ThreePlayer.unity

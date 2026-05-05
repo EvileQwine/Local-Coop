@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7388219822008486508}
   - component: {fileID: 6441654840643231094}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

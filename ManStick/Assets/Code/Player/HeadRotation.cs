@@ -49,6 +49,8 @@ public class HeadRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (rbHead == null) return;
+
         if (Dircetion != Vector2.zero)
         {
             controllerActive = true;

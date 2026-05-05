@@ -3,11 +3,14 @@ using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Splines.ExtrusionShapes;
 
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D[] rb;
+    Rigidbody2D rbHead;
     Vector2 moveInput;
+    [SerializeField] GameObject head;
     [SerializeField] int moveSpeed = 10;
     [SerializeField] int jumpHeight = 150;
     [SerializeField] int dashStrength = 150;
@@ -25,16 +28,26 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponentsInChildren<Rigidbody2D>();
+        rbHead = head.GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        if (canMove)
-        {
-            for (int i = 0; i < rb.Length; i++)
+
+            if (canMove)
             {
-                rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
+                for (int i = 0; i < rb.Length; i++)
+                {
+                if (rb[i] != null)
+                {
+                    rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
+                }
+                if (head  != null)
+                {
+                    rbHead.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
+                }
+                }
             }
-        }
+        
     }
     void OnMove(InputValue value)
     {
