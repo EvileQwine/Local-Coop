@@ -17,6 +17,7 @@ public class HeadRotation : MonoBehaviour
     [SerializeField] GameObject Bullet;
     [SerializeField] float bulletSpeed = 1.0f;
     bool controllerActive = false;
+    bool eyeSide = false;
     float rotationSpeed = 1000000;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,7 +57,24 @@ public class HeadRotation : MonoBehaviour
             controllerActive = true;
             targetAngle = Mathf.Atan2(Dircetion.y, Dircetion.x) * Mathf.Rad2Deg;
         }
-
+        if (rbHead.rotation <= 0 && eyeSide)
+        {
+            eyeSide = false;
+            rbHead.transform.localScale = new Vector2((-rbHead.transform.localScale.x), rbHead.transform.localScale.y);
+        }
+        else if (rbHead.rotation >= 0 && !eyeSide)
+        {
+            eyeSide = true;
+            rbHead.transform.localScale = new Vector2((-rbHead.transform.localScale.x), rbHead.transform.localScale.y);
+        }
+        if (rbHead.rotation > 180)
+        {
+            rbHead.rotation = -180;
+        }
+        else if (rbHead.rotation < -180)
+        {
+            rbHead.rotation = 180;
+        }
     }
 
     void FixedUpdate()

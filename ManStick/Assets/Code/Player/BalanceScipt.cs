@@ -1,10 +1,12 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Balancescript : MonoBehaviour
 {
-    float targetRoatation = 0;
+    [SerializeField]float targetRoatation = 0;
     Rigidbody2D rb;
-    float force = 15;
+    [SerializeField] float force = 100;
+    [SerializeField] bool isArm = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,10 +17,10 @@ public class Balancescript : MonoBehaviour
     void FixedUpdate()
     {
         rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRoatation, force * Time.fixedDeltaTime));
+        if (isArm)
+        {
+            targetRoatation = Random.Range(0, 360);
+        }
     }
 
-    //void OnJump()
-    //{
-    //    rb.linearVelocityY = 0f;
-    //}
 }
