@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float[] jumpCooldowns = new float[3] { 2, 3, 2 };
     [SerializeField] bool canMove = true;
     [SerializeField] public bool canJump = true;
+    [SerializeField] public bool footOnGround = false;
     public JumpAbility jumpAbility;
     void Awake()
     {
@@ -32,22 +33,16 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-
-            if (canMove)
+        if (canMove)
+        {
+            for (int i = 0; i < rb.Length; i++)
             {
-                for (int i = 0; i < rb.Length; i++)
-                {
                 if (rb[i] != null)
                 {
                     rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
                 }
-                if (head  != null)
-                {
-                    rbHead.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
-                }
-                }
             }
-        
+        }
     }
     void OnMove(InputValue value)
     {
@@ -55,8 +50,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnJump()
     {
-        if (canJump)
+        if (canJump || footOnGround)
         {
+            if (canJump && !footOnGround)
+            {
+                //idk you airjumped put something here
+            }
             for (int i = 0; i < rb.Length; i++)
             {
                 rb[i].linearVelocity = Vector2.zero;
