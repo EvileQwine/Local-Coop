@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rbHead;
     Vector2 moveInput;
     [SerializeField] GameObject head;
+    [SerializeField] GameObject particle;
     [SerializeField] int moveSpeed = 10;
     [SerializeField] int jumpHeight = 150;
     [SerializeField] int dashStrength = 150;
@@ -54,7 +55,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (canJump && !footOnGround)
             {
-                //idk you airjumped put something here
+                for (int i = 0; i < 12 ; i++)
+                {
+                    Instantiate(particle, (new Vector3(rbHead.transform.position.x + Random.Range(-2 , 2), (rbHead.transform.position.y - 4) + Random.Range(-1, 1), rbHead.transform.position.z)), Quaternion.identity);
+                }
             }
             for (int i = 0; i < rb.Length; i++)
             {
