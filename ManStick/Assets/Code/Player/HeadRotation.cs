@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using Unity.Mathematics;
+using System.Collections;
 public class HeadRotation : MonoBehaviour
 {
     Vector2 Dircetion;
@@ -16,6 +17,10 @@ public class HeadRotation : MonoBehaviour
     [SerializeField] GameObject Gun;
     [SerializeField] GameObject Bullet;
     [SerializeField] float bulletSpeed = 1.0f;
+
+    [SerializeField] float attackCooldown = 0.4f;
+    [SerializeField] bool canShoot = true;
+    
     bool controllerActive = false;
     bool eyeSide = false;
     float rotationSpeed = 1000000;
@@ -33,16 +38,21 @@ public class HeadRotation : MonoBehaviour
 
     void OnAttack()
     {
-        Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
-        if (!controllerActive)
+        if (canShoot)
         {
-            playerBullet.AddForce(direction.normalized * (bulletSpeed), ForceMode2D.Impulse);
-            rbHead.AddForce(-(direction.normalized * bulletSpeed), ForceMode2D.Impulse);
-        }
-        else if (Dircetion != Vector2.zero)
-        {
-            playerBullet.AddForce(Dircetion.normalized * (bulletSpeed), ForceMode2D.Impulse);
-            rbHead.AddForce(-(Dircetion.normalized * bulletSpeed), ForceMode2D.Impulse);
+            Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
+            if (!controllerActive)
+            {
+                playerBullet.AddForce(direction.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                rbHead.AddForce(-(direction.normalized * bulletSpeed), ForceMode2D.Impulse);
+                StartCoroutine(AttackCooldown(attackCooldown));
+            }
+            else if (Dircetion != Vector2.zero)
+            {
+                playerBullet.AddForce(Dircetion.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                rbHead.AddForce(-(Dircetion.normalized * bulletSpeed), ForceMode2D.Impulse);
+                StartCoroutine(AttackCooldown(attackCooldown));
+            }
         }
     }
 
@@ -92,8 +102,10 @@ public class HeadRotation : MonoBehaviour
 
         rbHead.MoveRotation(rotation);
     }
-
-
-
-
+    IEnumerator AttackCooldown(float f)
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(f);
+        canShoot = true;
+    }
 }
