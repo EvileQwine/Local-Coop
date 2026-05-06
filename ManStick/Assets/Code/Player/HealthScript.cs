@@ -28,4 +28,9 @@ public class HealthScript : MonoBehaviour
     {
         currHealth -= amount;
     }
+
+    public void Heal(int amount)
+    {
+        currHealth += amount;
+    }
 }

@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 8048205630364704637}
   - component: {fileID: 5378372782980870288}
   m_Layer: 3
-  m_Name: Canvas
+  m_Name: Health bars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,6 +24,10 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<HealthScript>().Hit(1);
         }
+        if (collision.gameObject.GetComponent<ChainHealth>() != null)
+        {
+            collision.gameObject.GetComponent<ChainHealth>().Hit(1);
+        }
         StartCoroutine(BulletTime());
     }
 
