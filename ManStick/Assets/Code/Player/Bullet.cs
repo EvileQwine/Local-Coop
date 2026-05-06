@@ -28,6 +28,10 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<ChainHealth>().Hit(1);
         }
+        if (collision.gameObject.GetComponent<AntonHealth>() != null)
+        {
+            collision.gameObject.GetComponent<AntonHealth>().Hit(1);
+        }
         StartCoroutine(BulletTime());
     }
 
