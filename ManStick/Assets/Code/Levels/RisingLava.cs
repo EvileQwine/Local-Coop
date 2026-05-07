@@ -27,7 +27,7 @@ public class RisingLava : MonoBehaviour
         {
             while (timer < risingTime)
             {
-                transform.localScale += Vector3.up * risingSpeed * Time.deltaTime;
+                transform.position += Vector3.up * risingSpeed * Time.deltaTime;
                 timer += Time.deltaTime;
                 yield return null;
             }
