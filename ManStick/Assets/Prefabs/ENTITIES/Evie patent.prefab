@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 670030494211794035}
   - component: {fileID: 8885828269122948562}
   - component: {fileID: 6931232257634231585}
+  - component: {fileID: 8511769178547878419}
   m_Layer: 7
   m_Name: Middle Arm
   m_TagString: Untagged
@@ -588,6 +589,33 @@ MonoBehaviour:
   targetRoatation: 90
   force: 50
   isArm: 0
+--- !u!114 &8511769178547878419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080398527760860428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  isLeg: 0
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &1904900903601260993
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  isLeg: 1
   groundFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -1026,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  isLeg: 1
   groundFilter:
     useTriggers: 0
     useLayerMask: 0
@@ -1054,6 +1084,7 @@ GameObject:
   - component: {fileID: 902851761776948471}
   - component: {fileID: 6904045937184761943}
   - component: {fileID: 7248700469922654424}
+  - component: {fileID: 2674427574872365782}
   m_Layer: 7
   m_Name: Right Arm
   m_TagString: Untagged
@@ -1248,6 +1279,33 @@ MonoBehaviour:
   targetRoatation: 0
   force: 1
   isArm: 1
+--- !u!114 &2674427574872365782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809600131277345598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  isLeg: 0
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &4525971324692415291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,7 +1393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   head: {fileID: 5293308484208209638}
-  particle: {fileID: 0}
+  particle: {fileID: 4259465923989365576, guid: d91c80b054307ee45ad4dd9764dbcffc, type: 3}
   moveSpeed: 10
   jumpHeight: 40
   dashStrength: 50
@@ -1347,7 +1405,8 @@ MonoBehaviour:
   canMove: 1
   canJump: 1
   footOnGround: 0
-  jumpAbility: 2
+  armOnGround: 0
+  jumpAbility: 0
 --- !u!114 &3072710141865787958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,6 +1744,7 @@ GameObject:
   - component: {fileID: 174163269886026738}
   - component: {fileID: 8557981043515331564}
   - component: {fileID: 8457642942260956053}
+  - component: {fileID: 2366631942364800861}
   m_Layer: 7
   m_Name: Left Arm
   m_TagString: Untagged
@@ -1879,6 +1939,33 @@ MonoBehaviour:
   targetRoatation: 0
   force: 1
   isArm: 1
+--- !u!114 &2366631942364800861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7944562899104414638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfb553f8b9792f41ad5ed091fd45f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckGround
+  isLeg: 0
+  groundFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1001 &1037756348461181564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2098,6 +2185,10 @@ PrefabInstance:
     - target: {fileID: 7073781896113406914, guid: 2d770cde79787eb48af88955cccae511, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7161183712128027641, guid: 2d770cde79787eb48af88955cccae511, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.4680004
       objectReference: {fileID: 0}
     - target: {fileID: 7161183712128027641, guid: 2d770cde79787eb48af88955cccae511, type: 3}
       propertyPath: m_ConnectedRigidBody

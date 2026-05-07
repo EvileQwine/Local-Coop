@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float[] jumpCooldowns = new float[3] { 2, 3, 2 };
     [SerializeField] bool canMove = true;
     [SerializeField] public bool canJump = true;
-    [SerializeField] public bool footOnGround = false;
+    public bool footOnGround = false;
+    public bool armOnGround = false;
     public JumpAbility jumpAbility;
     void Awake()
     {
@@ -42,6 +43,13 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
                 }
+            }
+        }
+        if (armOnGround && !footOnGround)
+        {
+            for (int i = 0; i < rb.Length; i++)
+            {
+                rb[i].AddForce(Vector2.up * 20, ForceMode2D.Force);
             }
         }
     }
@@ -67,10 +75,6 @@ public class PlayerMovement : MonoBehaviour
             switch (jumpAbility)
             {
                 case JumpAbility.Base:
-                    for (int i = 0; i < rb.Length; i++)
-                    {
-                        rb[i].linearVelocity = Vector2.zero;
-                    }
                     for (int i = 0; i < rb.Length; i++)
                     {
                         rb[i].AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
