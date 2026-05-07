@@ -8,9 +8,9 @@ using Unity.Mathematics;
 using System.Collections;
 public class HeadRotation : MonoBehaviour
 {
-    Vector2 Dircetion;
+    Vector2 controllerDir;
     float targetAngle;
-    Vector2 direction;
+    Vector2 mouseDir;
     Vector2 mousePosistion;
     Rigidbody2D rbHead;
     [SerializeField] GameObject Head;
@@ -33,7 +33,7 @@ public class HeadRotation : MonoBehaviour
    
     void OnLook(InputValue value)
     {
-        Dircetion = value.Get<Vector2>();
+        controllerDir = value.Get<Vector2>();
     }
 
     void OnAttack()
@@ -43,14 +43,14 @@ public class HeadRotation : MonoBehaviour
             Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
             if (!controllerActive)
             {
-                playerBullet.AddForce(direction.normalized * (bulletSpeed), ForceMode2D.Impulse);
-                rbHead.AddForce(-(direction.normalized * bulletSpeed), ForceMode2D.Impulse);
+                playerBullet.AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
                 StartCoroutine(AttackCooldown(attackCooldown));
             }
-            else if (Dircetion != Vector2.zero)
+            else if (controllerDir != Vector2.zero)
             {
-                playerBullet.AddForce(Dircetion.normalized * (bulletSpeed), ForceMode2D.Impulse);
-                rbHead.AddForce(-(Dircetion.normalized * bulletSpeed), ForceMode2D.Impulse);
+                playerBullet.AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
                 StartCoroutine(AttackCooldown(attackCooldown));
             }
         }
@@ -60,12 +60,10 @@ public class HeadRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rbHead == null) return;
-
-        if (Dircetion != Vector2.zero)
+        if (controllerDir != Vector2.zero)
         {
             controllerActive = true;
-            targetAngle = Mathf.Atan2(Dircetion.y, Dircetion.x) * Mathf.Rad2Deg;
+            targetAngle = Mathf.Atan2(controllerDir.y, controllerDir.x) * Mathf.Rad2Deg;
         }
         if (rbHead.rotation <= 0 && eyeSide)
         {
@@ -93,9 +91,9 @@ public class HeadRotation : MonoBehaviour
         {
             mousePosistion = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
-            direction = new Vector2(mousePosistion.x - rbHead.position.x, mousePosistion.y - rbHead.position.y);
+            mouseDir = new Vector2(mousePosistion.x - rbHead.position.x, mousePosistion.y - rbHead.position.y);
 
-            targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            targetAngle = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg;
 
         }
         float rotation = Mathf.MoveTowardsAngle(rbHead.rotation, targetAngle - 90, rotationSpeed * Time.fixedDeltaTime);
