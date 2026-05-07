@@ -47,15 +47,19 @@ public class HealthScript : MonoBehaviour
             rb[i].AddForce(Vector2.up * lavaUpForce, ForceMode2D.Impulse);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("collision");
-        for (int p = 0; p < colliderA.Length; p++)
+        if (collision.gameObject.CompareTag("Lava"))
         {
-            if (collision.gameObject.CompareTag("Lava"))
-            {
-                TouchLava();
-            }
+            Hit(1);
         }
+        //for (int p = 0; p < colliderA.Length; p++)
+        //{
+        //    if (collision.gameObject.CompareTag("Lava"))
+        //    {
+        //        TouchLava();
+        //    }
+        //}
     }
 }
