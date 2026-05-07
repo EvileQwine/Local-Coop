@@ -40,10 +40,10 @@ public class ChainHealth : MonoBehaviour
         {
             if (fadeStart < fadeTime)
             {
-                fadeStart += Time.deltaTime * fadeTime;
+                fadeStart += (Time.deltaTime * fadeTime);
                 for (int i = 0; i < transform.childCount; i++)
                 {
-                    renderer[i].material.color = Color.Lerp(objectColor, fadeColor, fadeStart);
+                    renderer[i].material.color = Color.Lerp(objectColor, fadeColor, fadeStart * 2   );
                 }
             }
             else
@@ -60,7 +60,7 @@ public class ChainHealth : MonoBehaviour
     IEnumerator FlashTimer()
     {
         flashing = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.75f);
         flashing = false;
     }
 }
