@@ -3590,6 +3590,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1899101156}
     m_Modifications:
+    - target: {fileID: 884566283553242243, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: healthbarSlider
+      value: 
+      objectReference: {fileID: 1058345775}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Evie patent
@@ -3647,6 +3651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1899101156}
     m_Modifications:
+    - target: {fileID: 884566283553242243, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: healthbarSlider
+      value: 
+      objectReference: {fileID: 474386466}
     - target: {fileID: 893437435856068884, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: head
       value: 
