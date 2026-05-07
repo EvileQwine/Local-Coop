@@ -4,6 +4,7 @@ public class CheckGround : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     Rigidbody2D rb;
+    [SerializeField] bool isLeg = true;
     [SerializeField] ContactFilter2D groundFilter;
     void Awake()
     {
@@ -14,13 +15,27 @@ public class CheckGround : MonoBehaviour
     }
     void Update()
     {
-        if (rb.IsTouching(groundFilter))
+        if (isLeg)
         {
-            GetComponentInParent<PlayerMovement>().footOnGround = true;
+            if (rb.IsTouching(groundFilter))
+            {
+                GetComponentInParent<PlayerMovement>().footOnGround = true;
+            }
+            else
+            {
+                GetComponentInParent<PlayerMovement>().footOnGround = false;
+            }
         }
         else
         {
-            GetComponentInParent<PlayerMovement>().footOnGround = false;
+            if (rb.IsTouching(groundFilter))
+            {
+                GetComponentInParent<PlayerMovement>().armOnGround = true;
+            }
+            else
+            {
+                GetComponentInParent<PlayerMovement>().armOnGround = false;
+            }
         }
     }
 }
