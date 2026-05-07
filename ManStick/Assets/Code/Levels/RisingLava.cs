@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class RisingLava : MonoBehaviour
 {
-    private float risingSpeed = 3f;
-    private float risingTime = 3f;
-    private float waitTime = 7f;
+    [SerializeField] private float risingSpeed = 3f;
+    [SerializeField] private float risingTime = 3f;
+    [SerializeField] private float waitTime = 7f;
+    private bool alwaysTrue = true;
     private float timer = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,16 +23,16 @@ public class RisingLava : MonoBehaviour
 
     IEnumerator LavaRising()
     {
-        while (true)
+        while (alwaysTrue)
         {
-            while (timer  < risingTime)
+            while (timer < risingTime)
             {
-                transform.position += Vector3.up * risingSpeed * Time.deltaTime;
+                transform.localScale += Vector3.up * risingSpeed * Time.deltaTime;
                 timer += Time.deltaTime;
                 yield return null;
             }
-
             yield return new WaitForSeconds(waitTime);
+            timer = 0f;
         }
     }
 }
