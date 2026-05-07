@@ -20,8 +20,9 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<HealthScript>() != null)
+        if (collision.gameObject.CompareTag("Body Part"))
         {
+            Debug.Log("Hit");
             collision.gameObject.GetComponent<HealthScript>().Hit(1);
         }
         if (collision.gameObject.GetComponent<ChainHealth>() != null)

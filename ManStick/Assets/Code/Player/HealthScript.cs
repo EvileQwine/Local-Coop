@@ -9,12 +9,12 @@ public class HealthScript : MonoBehaviour
     public float currHealth;
     private float lavaUpForce = 10;
     Rigidbody2D[] rb;
-    private Collider2D[] collider;
+    private Collider2D[] colliderA;
 
     void Start()
     {
         currHealth = maxHealth;
-        collider = GetComponentsInChildren<Collider2D>();
+        colliderA = GetComponentsInChildren<Collider2D>();
         rb = GetComponentsInChildren<Rigidbody2D>();
     }
 
@@ -50,7 +50,7 @@ public class HealthScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision");
-        for (int p = 0; p < collider.Length; p++)
+        for (int p = 0; p < colliderA.Length; p++)
         {
             if (collision.gameObject.CompareTag("Lava"))
             {
