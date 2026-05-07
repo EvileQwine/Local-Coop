@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1619417356933531122}
   m_Layer: 7
   m_Name: Left Uper Leg
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 8511769178547878419}
   m_Layer: 7
   m_Name: Middle Arm
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 8478792330052337373}
   m_Layer: 7
   m_Name: Left Lower Leg
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 181953537736995116}
   m_Layer: 7
   m_Name: Right Lower Leg
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 2674427574872365782}
   m_Layer: 7
   m_Name: Right Arm
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 884566283553242243}
   m_Layer: 7
   m_Name: Evie patent
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1547,7 +1547,7 @@ GameObject:
   - component: {fileID: 5179230010655777404}
   m_Layer: 7
   m_Name: Right Uper Leg
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1747,7 +1747,7 @@ GameObject:
   - component: {fileID: 2366631942364800861}
   m_Layer: 7
   m_Name: Left Arm
-  m_TagString: Untagged
+  m_TagString: Body Part
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,6 +1981,10 @@ PrefabInstance:
     - target: {fileID: 2500004292548318991, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500004292548318991, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
+      propertyPath: m_TagString
+      value: Body Part
       objectReference: {fileID: 0}
     - target: {fileID: 2696222940174368643, guid: c2572175dbf8699479b3fe8973cc2df1, type: 3}
       propertyPath: m_Enabled
