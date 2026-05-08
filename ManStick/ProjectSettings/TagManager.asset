@@ -8,6 +8,7 @@ TagManager:
   - Lava
   - Undefined
   - Body Part
+  - Bullets
   layers:
   - Default
   - TransparentFX
