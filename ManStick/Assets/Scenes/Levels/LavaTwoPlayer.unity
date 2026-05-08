@@ -505,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Evie patent
       objectReference: {fileID: 0}
+    - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_TagString
+      value: Body Part
+      objectReference: {fileID: 0}
     - target: {fileID: 6265156270643574261, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_CollisionDetection
       value: 0
@@ -552,7 +556,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2075600491}
+    - targetCorrespondingSourceObject: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2075600490}
   m_SourcePrefab: {fileID: 100100000, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
 --- !u!4 &468489882 stripped
 Transform:
@@ -5132,6 +5142,84 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &2075600485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+  m_PrefabInstance: {fileID: 468489881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2075600490
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075600485}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &2075600491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075600485}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0071258545, y: -0.19967175}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.5151062, y: 0.6006565}
+  m_EdgeRadius: 0
 --- !u!1 &2084864170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2969170545878040576, guid: e5269bc9e54fad145b4fd2f745bea013, type: 3}
