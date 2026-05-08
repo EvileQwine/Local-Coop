@@ -12,18 +12,23 @@ public class HealthScript : MonoBehaviour
     private float lavaDamageCooldown = 3f;
     private bool hit = false;
     Rigidbody2D[] rb;
+    HingeJoint2D[] hingeJoints;
 
     void Start()
     {
         currHealth = maxHealth;
         rb = GetComponentsInChildren<Rigidbody2D>();
+        hingeJoints = GetComponentsInChildren<HingeJoint2D>();
     }
 
     private void Update()
     {
         if (currHealth <= 0)
         {
-            Destroy(gameObject);
+            for(int i  = 0; i < hingeJoints.Length; i++)
+            {
+                Destroy(hingeJoints[i]);
+            }
         }
 
         healthbarSlider.value = currHealth;
