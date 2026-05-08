@@ -23,8 +23,9 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Body Part"))
         {
             Debug.Log("Hit");
-            collision.gameObject.GetComponent<HealthScript>().Hit(1);
+            collision.gameObject.GetComponentInParent<HealthScript>().Hit(1);
         }
+        else { Debug.Log(gameObject.tag);}
         if (collision.gameObject.GetComponent<AntonHealth>() != null)
         {
             collision.gameObject.GetComponent<AntonHealth>().Hit(1);
