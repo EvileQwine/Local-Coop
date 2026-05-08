@@ -8,8 +8,8 @@ public class HealthScript : MonoBehaviour
     public Slider healthbarSlider;
     public float maxHealth = 5;
     public float currHealth;
-    private float lavaUpForce = 10f;
-    private float lavaDamageCooldown = 3f;
+    private float lavaUpForce = 100f;
+    private float lavaDamageCooldown = 2f;
     private bool hit = false;
     Rigidbody2D[] rb;
 
@@ -42,7 +42,6 @@ public class HealthScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("collision");
         if (collision.gameObject.CompareTag("Lava"))
         {
             if (!hit)
@@ -57,7 +56,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    private IEnumerator LavaDamageCooldown()
+    IEnumerator LavaDamageCooldown()
     {
         hit = true;
         yield return new WaitForSeconds(lavaDamageCooldown);

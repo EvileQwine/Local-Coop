@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5761088287224458798}
   - component: {fileID: 4757869525990882376}
   - component: {fileID: 8973145548403495821}
-  - component: {fileID: 3314981314929121279}
   m_Layer: 0
   m_Name: Sawblade
   m_TagString: Untagged
@@ -69,19 +68,6 @@ Rigidbody2D:
   m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &8973145548403495821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4174415923136245759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57c5ec6b380b97b478594489176a24e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChainHealth
-  fadeStart: 0
---- !u!114 &3314981314929121279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1059,7 +1045,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.56, y: 1.93}
-  m_ConnectedAnchor: {x: 0.2850606, y: -0.4913206}
+  m_ConnectedAnchor: {x: -297.82407, y: -10.862641}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
