@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 884566283553242243}
   m_Layer: 7
   m_Name: Evie patent
-  m_TagString: Body Part
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2140,11 +2140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4389542564636634336, guid: 2d770cde79787eb48af88955cccae511, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5311551570542669407, guid: 2d770cde79787eb48af88955cccae511, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7073781896113406914, guid: 2d770cde79787eb48af88955cccae511, type: 3}
       propertyPath: m_LocalPosition.x

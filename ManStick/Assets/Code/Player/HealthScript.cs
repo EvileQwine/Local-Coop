@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,14 +8,14 @@ public class HealthScript : MonoBehaviour
     public Slider healthbarSlider;
     public float maxHealth = 5;
     public float currHealth;
-    private float lavaUpForce = 10;
+    private float lavaUpForce = 10f;
+    private float lavaDamageCooldown = 3f;
+    private bool hit = false;
     Rigidbody2D[] rb;
-    private Collider2D[] colliderA;
 
     void Start()
     {
         currHealth = maxHealth;
-        colliderA = GetComponentsInChildren<Collider2D>();
         rb = GetComponentsInChildren<Rigidbody2D>();
     }
 
@@ -38,24 +39,28 @@ public class HealthScript : MonoBehaviour
     {
         currHealth += amount;
     }
-    private void TouchLava()
-    {
-        Debug.Log("Hit lava");
-        currHealth--;
-        for (int i = 0; i < rb.Length; i++)
-        {
-            rb[i].AddForce(Vector2.up * lavaUpForce, ForceMode2D.Impulse);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("collision");
-        for (int p = 0; p < colliderA.Length; p++)
+        if (collision.gameObject.CompareTag("Lava"))
         {
-            if (collision.gameObject.CompareTag("Lava"))
+            if (!hit)
             {
-                TouchLava();
+                Hit(1);
+                for (int i = 0; i < rb.Length; i++)
+                {
+                    rb[i].AddForce(Vector2.up * lavaUpForce, ForceMode2D.Impulse);
+                }
+                StartCoroutine(LavaDamageCooldown());
             }
         }
+    }
+
+    private IEnumerator LavaDamageCooldown()
+    {
+        hit = true;
+        yield return new WaitForSeconds(lavaDamageCooldown);
+        hit = false;
     }
 }
