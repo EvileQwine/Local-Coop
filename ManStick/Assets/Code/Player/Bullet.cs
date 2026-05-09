@@ -22,22 +22,17 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Body Part"))
         {
-            Debug.Log("Hit");
-            collision.gameObject.GetComponent<HealthScript>().Hit(1);
+            collision.gameObject.GetComponentInParent<HealthScript>().Hit(1);
+        }
+        if (collision.gameObject.GetComponent<ChainHealth>() != null)
+        {
+            collision.gameObject.GetComponent<ChainHealth>().Hit(1);
         }
         if (collision.gameObject.GetComponent<AntonHealth>() != null)
         {
             collision.gameObject.GetComponent<AntonHealth>().Hit(1);
         }
         StartCoroutine(BulletTime());
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<ChainHealth>() != null)
-        {
-            collision.gameObject.GetComponent<ChainHealth>().Hit(1);
-        }
     }
 
     // Update is called once per frame

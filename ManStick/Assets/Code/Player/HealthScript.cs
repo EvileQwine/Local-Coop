@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,22 +8,27 @@ public class HealthScript : MonoBehaviour
     public Slider healthbarSlider;
     public float maxHealth = 5;
     public float currHealth;
-    private float lavaUpForce = 10;
+    private float lavaUpForce = 100f;
+    private float lavaDamageCooldown = 2f;
+    private bool hit = false;
     Rigidbody2D[] rb;
-    private Collider2D[] colliderA;
+    HingeJoint2D[] hingeJoints;
 
     void Start()
     {
         currHealth = maxHealth;
-        colliderA = GetComponentsInChildren<Collider2D>();
         rb = GetComponentsInChildren<Rigidbody2D>();
+        hingeJoints = GetComponentsInChildren<HingeJoint2D>();
     }
 
     private void Update()
     {
         if (currHealth <= 0)
         {
-            Destroy(gameObject);
+            for(int i  = 0; i < hingeJoints.Length; i++)
+            {
+                Destroy(hingeJoints[i]);
+            }
         }
 
         healthbarSlider.value = currHealth;
@@ -38,24 +44,27 @@ public class HealthScript : MonoBehaviour
     {
         currHealth += amount;
     }
-    private void TouchLava()
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Hit lava");
-        currHealth--;
-        for (int i = 0; i < rb.Length; i++)
+        if (collision.gameObject.CompareTag("Lava"))
         {
-            rb[i].AddForce(Vector2.up * lavaUpForce, ForceMode2D.Impulse);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("collision");
-        for (int p = 0; p < colliderA.Length; p++)
-        {
-            if (collision.gameObject.CompareTag("Lava"))
+            if (!hit)
             {
-                TouchLava();
+                Hit(1);
+                for (int i = 0; i < rb.Length; i++)
+                {
+                    rb[i].AddForce(Vector2.up * lavaUpForce, ForceMode2D.Impulse);
+                }
+                StartCoroutine(LavaDamageCooldown());
             }
         }
+    }
+
+    IEnumerator LavaDamageCooldown()
+    {
+        hit = true;
+        yield return new WaitForSeconds(lavaDamageCooldown);
+        hit = false;
     }
 }

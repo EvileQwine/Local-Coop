@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Head
   - Lava
+  - Undefined
   - Body Part
+  - Bullets
   layers:
   - Default
   - TransparentFX

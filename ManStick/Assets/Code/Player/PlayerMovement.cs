@@ -45,13 +45,13 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        if (armOnGround && !footOnGround)
-        {
-            for (int i = 0; i < rb.Length; i++)
-            {
-                rb[i].AddForce(Vector2.up * 20, ForceMode2D.Force);
-            }
-        }
+        //if (armOnGround && !footOnGround)
+        //{
+        //    for (int i = 0; i < rb.Length; i++)
+        //    {
+        //        rb[i].AddForce(Vector2.up * 20, ForceMode2D.Force);
+        //    }
+        //}
     }
     void OnMove(InputValue value)
     {
