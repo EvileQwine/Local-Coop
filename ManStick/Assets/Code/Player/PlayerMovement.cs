@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 for (int i = 0; i < 12 ; i++)
                 {
-                    Instantiate(particle, (new Vector3(rbHead.transform.position.x + Random.Range(-2 , 2), (rbHead.transform.position.y - 4) + Random.Range(-1, 1), rbHead.transform.position.z)), Quaternion.identity);
+                    Instantiate(particle, (new Vector3(rbHead.transform.position.x + Random.Range(-2, 2), (rbHead.transform.position.y - 4) + Random.Range(-1, 1), rbHead.transform.position.z)), Quaternion.identity);
                 }
             }
             for (int i = 0; i < rb.Length; i++)
