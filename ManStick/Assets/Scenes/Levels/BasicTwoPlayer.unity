@@ -3626,6 +3626,14 @@ PrefabInstance:
       propertyPath: healthbarSlider
       value: 
       objectReference: {fileID: 1058345775}
+    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 327116623110685040, guid: bb8278d7d2d46bb45a447f9a70f94c36, type: 3}
+    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: bulletSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Blue Player
@@ -3711,6 +3719,10 @@ PrefabInstance:
       propertyPath: 'jumpCooldowns.Array.data[2]'
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Red Player

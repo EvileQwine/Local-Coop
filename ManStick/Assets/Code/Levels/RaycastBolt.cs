@@ -1,9 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class RaycastBolt : MonoBehaviour
 {
     private bool hasLineOfSight = false;
+    private bool canShoot = true;
     public Transform linecastEndPos;
+    public Transform bolt;
+    private float shootCooldown = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,18 +21,29 @@ public class RaycastBolt : MonoBehaviour
 
         if (ray.collider != null)
         {
-            hasLineOfSight = ray.collider.CompareTag("Body Part");
-            hasLineOfSight = ray.collider.CompareTag("Bullets");
+            if (ray.collider.CompareTag("Body Part") || ray.collider.CompareTag("Bullets"))
+            {
+                hasLineOfSight = true;
+            }
+            else { hasLineOfSight= false; }
+            Debug.Log($"{hasLineOfSight}");
             Debug.Log("I SEE YOU");
-            if (hasLineOfSight)
+            if (hasLineOfSight && canShoot)
             {
-                Debug.DrawLine(transform.position, linecastEndPos.position, Color.magenta);
+                Debug.Log("hit");
+                Debug.DrawLine(transform.position, linecastEndPos.position, Color.red);
+                StartCoroutine(Shoot());
             }
-            else
-            {
-                Debug.DrawLine(transform.position, linecastEndPos.position, Color.white);
-            }
+            else { Debug.DrawLine(transform.position, linecastEndPos.position, Color.blue); }
         }
-        hasLineOfSight = false;
+    }
+
+    private IEnumerator Shoot()
+    {
+        hasLineOfSight = false; 
+        canShoot = false;
+        Instantiate(bolt, transform.position, transform.rotation);
+        yield return new WaitForSeconds(shootCooldown);
+        canShoot = true;
     }
 }
