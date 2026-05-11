@@ -40,17 +40,23 @@ public class HeadRotation : MonoBehaviour
     {
         if (canShoot)
         {
-            Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
+            GameObject playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation);
             if (!controllerActive)
             {
-                playerBullet.AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
-                rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                if (playerBullet != null)
+                {
+                    playerBullet.GetComponent<Rigidbody2D>().AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                    rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                }
                 StartCoroutine(AttackCooldown(attackCooldown));
             }
             else if (controllerDir != Vector2.zero)
             {
-                playerBullet.AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
-                rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                if (playerBullet != null)
+                {
+                    playerBullet.GetComponent<Rigidbody2D>().AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                    rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                }
                 StartCoroutine(AttackCooldown(attackCooldown));
             }
         }
