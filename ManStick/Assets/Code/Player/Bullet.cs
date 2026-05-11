@@ -10,12 +10,12 @@ public class Bullet : MonoBehaviour
     HealthScript healthScript;
     Collider2D c;
     [SerializeField] float bulletDespawnTime = 2.5f;
+    [SerializeField] bool vanishOnContact = true;
+    [SerializeField] bool vanishOverTime = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         c = GetComponent<Collider2D>();
-        c.enabled = false;
-        StartCoroutine(Collider());
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -23,29 +23,28 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Body Part"))
         {
             collision.gameObject.GetComponentInParent<HealthScript>().Hit(1);
+            Destroy(gameObject);
         }
         if (collision.gameObject.GetComponent<ChainHealth>() != null)
         {
             collision.gameObject.GetComponent<ChainHealth>().Hit(1);
+            Destroy(gameObject);
         }
         if (collision.gameObject.GetComponent<AntonHealth>() != null)
         {
             collision.gameObject.GetComponent<AntonHealth>().Hit(1);
+            Destroy(gameObject);
+        }
+        if (vanishOnContact)
+        {
+            Destroy(gameObject);
         }
         StartCoroutine(BulletTime());
     }
-
-    // Update is called once per frame
     void Update()
     {
 
     }
-    IEnumerator Collider()
-    {
-        yield return new WaitForSeconds(0.2f);
-        c.enabled = true;
-    }
-
     IEnumerator BulletTime()
     {
         yield return new WaitForSeconds(bulletDespawnTime);

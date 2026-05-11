@@ -35,13 +35,16 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        if (canMove)
+        if (gameObject.GetComponentInParent<HealthScript>().currHealth > 0)
         {
-            for (int i = 0; i < rb.Length; i++)
+            if (canMove)
             {
-                if (rb[i] != null)
+                for (int i = 0; i < rb.Length; i++)
                 {
-                    rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
+                    if (rb[i] != null)
+                    {
+                        rb[i].linearVelocity = new Vector2(moveInput.x * moveSpeed, rb[i].linearVelocityY);
+                    }
                 }
             }
         }
