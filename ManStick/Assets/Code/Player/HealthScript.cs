@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthScript : MonoBehaviour
 {
     public Slider healthbarSlider;
-    public float maxHealth = 5;
+    public float maxHealth = 10;
     public float currHealth;
     private float lavaUpForce = 100f;
     private float lavaDamageCooldown = 2f;

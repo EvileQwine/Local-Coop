@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Body Part
   - Bullets
+  - EndPoint
   layers:
   - Default
   - TransparentFX
@@ -51,6 +52,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3443731697
+    locked: 0
+  - name: Pupil
+    uniqueID: 2903785829
     locked: 0
   m_RenderingLayers:
   - Default

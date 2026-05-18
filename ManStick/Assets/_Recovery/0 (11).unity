@@ -3622,6 +3622,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1899101156}
     m_Modifications:
+    - target: {fileID: 884566283553242243, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: healthbarSlider
+      value: 
+      objectReference: {fileID: 1058345775}
+    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 327116623110685040, guid: 4f1b46bb124c1464d9b17121fd67f0e5, type: 3}
+    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: bulletSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: attackCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Blue Player

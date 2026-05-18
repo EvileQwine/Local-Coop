@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class fourplayer : MonoBehaviour
+public class LavaLevel : MonoBehaviour
 {
-    public void FourPlayerGame()
+    public void LavaLevely()
     {
         SceneManager.LoadSceneAsync(4);
     }
