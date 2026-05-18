@@ -18,6 +18,8 @@ public class HeadRotation : MonoBehaviour
     [SerializeField] GameObject Bullet;
     [SerializeField] GameObject EndPoint;
     [SerializeField] float bulletSpeed = 1.0f;
+    //[SerializeField] bool SplitShot = false;
+    [SerializeField] int splitShotOffset = 10;
 
     [SerializeField] float attackCooldown = 0.4f;
     [SerializeField] bool canShoot = true;
@@ -41,6 +43,25 @@ public class HeadRotation : MonoBehaviour
     {
         if (canShoot)
         {
+            //if (SplitShot)
+            //{
+            //    GameObject playerBulletUp = Instantiate(Bullet, Gun.transform.position, transform.rotation);
+            //    GameObject playerBulletDown = Instantiate(Bullet, Gun.transform.position, transform.rotation);
+            //    if (!controllerActive)
+            //    {
+            //        playerBulletUp.GetComponent<Rigidbody2D>().AddForce((new Vector2(mouseDir.normalized.x + splitShotOffset, mouseDir.normalized.y)) * (bulletSpeed), ForceMode2D.Impulse);
+            //        playerBulletDown.GetComponent<Rigidbody2D>().AddForce((new Vector2(mouseDir.normalized.x - splitShotOffset, mouseDir.normalized.y)) * (bulletSpeed), ForceMode2D.Impulse);
+            //    }
+            //    else if (controllerDir != Vector2.zero)
+            //    {
+            //        playerBulletUp.GetComponent<Rigidbody2D>().AddForce((new Vector2(controllerDir.normalized.x + splitShotOffset, controllerDir.normalized.y)) * (bulletSpeed), ForceMode2D.Impulse);
+            //        playerBulletDown.GetComponent<Rigidbody2D>().AddForce((new Vector2(controllerDir.normalized.x - splitShotOffset, controllerDir.normalized.y)) * (bulletSpeed), ForceMode2D.Impulse);
+            //    }
+            //}
+            //else
+            //{
+                
+            //}
             GameObject playerBullet = Instantiate(Bullet, Gun.transform.position, transform.rotation);
             if (playerBullet.GetComponent<Laser>() != null)
             {
@@ -53,7 +74,6 @@ public class HeadRotation : MonoBehaviour
                     playerBullet.GetComponent<Rigidbody2D>().AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
                     rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
                 }
-                StartCoroutine(AttackCooldown(attackCooldown));
             }
             else if (controllerDir != Vector2.zero)
             {
@@ -62,8 +82,8 @@ public class HeadRotation : MonoBehaviour
                     playerBullet.GetComponent<Rigidbody2D>().AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
                     rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
                 }
-                StartCoroutine(AttackCooldown(attackCooldown));
             }
+            StartCoroutine(AttackCooldown(attackCooldown));
         }
     }
 
