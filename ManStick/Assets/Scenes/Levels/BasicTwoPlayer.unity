@@ -3629,11 +3629,7 @@ PrefabInstance:
     - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: Bullet
       value: 
-      objectReference: {fileID: 327116623110685040, guid: bb8278d7d2d46bb45a447f9a70f94c36, type: 3}
-    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-      propertyPath: bulletSpeed
-      value: 50
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 327116623110685040, guid: 4f1b46bb124c1464d9b17121fd67f0e5, type: 3}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Blue Player
@@ -3677,6 +3673,10 @@ PrefabInstance:
     - target: {fileID: 6869352962342196994, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8608137886721822565, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

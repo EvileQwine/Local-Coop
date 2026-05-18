@@ -7,11 +7,11 @@ public class RaycastBolt : MonoBehaviour
     private bool canShoot = true;
     public Transform linecastEndPos;
     public Transform bolt;
-    private float shootCooldown = 5f;
+    [SerializeField] private float shootCooldown = 5f;
+    [SerializeField] private float shootSpeed = 5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -25,24 +25,22 @@ public class RaycastBolt : MonoBehaviour
             {
                 hasLineOfSight = true;
             }
-            else { hasLineOfSight= false; }
-            Debug.Log($"{hasLineOfSight}");
-            Debug.Log("I SEE YOU");
+            else { hasLineOfSight = false; }
             if (hasLineOfSight && canShoot)
             {
-                Debug.Log("hit");
-                Debug.DrawLine(transform.position, linecastEndPos.position, Color.red);
                 StartCoroutine(Shoot());
             }
-            else { Debug.DrawLine(transform.position, linecastEndPos.position, Color.blue); }
         }
     }
 
     private IEnumerator Shoot()
     {
-        hasLineOfSight = false; 
+        hasLineOfSight = false;
         canShoot = false;
-        Instantiate(bolt, transform.position, transform.rotation);
+
+        Rigidbody2D shootyBolt = Instantiate(bolt, transform.position, transform.rotation.normalized).GetComponent<Rigidbody2D>();
+        shootyBolt.AddForce(transform.up * shootSpeed, ForceMode2D.Impulse);
+
         yield return new WaitForSeconds(shootCooldown);
         canShoot = true;
     }

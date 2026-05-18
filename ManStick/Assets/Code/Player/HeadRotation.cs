@@ -16,6 +16,7 @@ public class HeadRotation : MonoBehaviour
     [SerializeField] GameObject Head;
     [SerializeField] GameObject Gun;
     [SerializeField] GameObject Bullet;
+    [SerializeField] GameObject EndPoint;
     [SerializeField] float bulletSpeed = 1.0f;
 
     [SerializeField] float attackCooldown = 0.4f;
@@ -40,17 +41,27 @@ public class HeadRotation : MonoBehaviour
     {
         if (canShoot)
         {
-            Rigidbody2D playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation).GetComponent<Rigidbody2D>();
+            GameObject playerBullet = Instantiate(Bullet, Gun.transform.position, transform.rotation);
+            if (playerBullet.GetComponent<Laser>() != null)
+            {
+                playerBullet.GetComponent<Laser>().AssignEndPoint(EndPoint.transform.position);
+            }
             if (!controllerActive)
             {
-                playerBullet.AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
-                rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                if (playerBullet.GetComponent<Rigidbody2D>() != null)
+                {
+                    playerBullet.GetComponent<Rigidbody2D>().AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                    rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                }
                 StartCoroutine(AttackCooldown(attackCooldown));
             }
             else if (controllerDir != Vector2.zero)
             {
-                playerBullet.AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
-                rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                if (playerBullet.GetComponent<Rigidbody2D>() != null)
+                {
+                    playerBullet.GetComponent<Rigidbody2D>().AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
+                    rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
+                }
                 StartCoroutine(AttackCooldown(attackCooldown));
             }
         }

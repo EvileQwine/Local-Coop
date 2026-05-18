@@ -1426,8 +1426,9 @@ MonoBehaviour:
   Head: {fileID: 5293308484208209638}
   Gun: {fileID: 4335059558289910873}
   Bullet: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
+  EndPoint: {fileID: 7470118210336686510}
   bulletSpeed: 50
-  attackCooldown: 0.4
+  attackCooldown: 1
   canShoot: 1
 --- !u!114 &884566283553242243
 MonoBehaviour:
@@ -1629,6 +1630,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7470118210336686510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8608137886721822565}
+  m_Layer: 7
+  m_Name: LaserEnd
+  m_TagString: EndPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8608137886721822565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470118210336686510}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 12.537001, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1708072167661945284}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7599888718437478888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2352,9 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 6963355815293208968, guid: 2d770cde79787eb48af88955cccae511, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7073781896113406914, guid: 2d770cde79787eb48af88955cccae511, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 8608137886721822565}
     - targetCorrespondingSourceObject: {fileID: 7073781896113406914, guid: 2d770cde79787eb48af88955cccae511, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1926896250652917941}

@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Body Part
   - Bullets
+  - EndPoint
   layers:
   - Default
   - TransparentFX
