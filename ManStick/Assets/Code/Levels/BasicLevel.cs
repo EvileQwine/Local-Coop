@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class threeplayer : MonoBehaviour
+public class BasicLevel : MonoBehaviour
 {
-    public void ThreePlayerGame()
+    public void BasicLevely()
     {
         SceneManager.LoadSceneAsync(3);
     }
