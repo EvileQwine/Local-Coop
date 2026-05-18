@@ -1139,37 +1139,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490990658}
   m_CullTransparentMesh: 1
---- !u!1 &560425066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 560425067}
-  m_Layer: 7
-  m_Name: LaserEnd
-  m_TagString: EndPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &560425067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560425066}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 12.537001, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1156473524}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585777474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,11 +2717,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!4 &1156473524 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1708072167661945284, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-  m_PrefabInstance: {fileID: 1666433207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1163947135
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,19 +3629,7 @@ PrefabInstance:
     - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: Bullet
       value: 
-      objectReference: {fileID: 327116623110685040, guid: 273ee1ed16143aa47ac2f74d4510273b, type: 3}
-    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-      propertyPath: EndPoint
-      value: 
-      objectReference: {fileID: 560425066}
-    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-      propertyPath: bulletSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072710141865787958, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-      propertyPath: attackCooldown
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 327116623110685040, guid: 4f1b46bb124c1464d9b17121fd67f0e5, type: 3}
     - target: {fileID: 4525971324692415291, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
       propertyPath: m_Name
       value: Blue Player
@@ -3722,12 +3674,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8608137886721822565, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1708072167661945284, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 560425067}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1f407fef3105504b96b4e9f65cf91e9, type: 3}
 --- !u!1001 &1701335178
