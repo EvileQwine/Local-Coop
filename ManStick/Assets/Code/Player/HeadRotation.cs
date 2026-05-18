@@ -16,6 +16,7 @@ public class HeadRotation : MonoBehaviour
     [SerializeField] GameObject Head;
     [SerializeField] GameObject Gun;
     [SerializeField] GameObject Bullet;
+    [SerializeField] GameObject EndPoint;
     [SerializeField] float bulletSpeed = 1.0f;
 
     [SerializeField] float attackCooldown = 0.4f;
@@ -40,10 +41,14 @@ public class HeadRotation : MonoBehaviour
     {
         if (canShoot)
         {
-            GameObject playerBullet = Instantiate(Bullet, Gun.transform.position, Gun.transform.rotation);
+            GameObject playerBullet = Instantiate(Bullet, Gun.transform.position, transform.rotation);
+            if (playerBullet.GetComponent<Laser>() != null)
+            {
+                playerBullet.GetComponent<Laser>().AssignEndPoint(EndPoint.transform.position);
+            }
             if (!controllerActive)
             {
-                if (playerBullet != null)
+                if (playerBullet.GetComponent<Rigidbody2D>() != null)
                 {
                     playerBullet.GetComponent<Rigidbody2D>().AddForce(mouseDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
                     rbHead.AddForce(-(mouseDir.normalized * bulletSpeed), ForceMode2D.Impulse);
@@ -52,7 +57,7 @@ public class HeadRotation : MonoBehaviour
             }
             else if (controllerDir != Vector2.zero)
             {
-                if (playerBullet != null)
+                if (playerBullet.GetComponent<Rigidbody2D>() != null)
                 {
                     playerBullet.GetComponent<Rigidbody2D>().AddForce(controllerDir.normalized * (bulletSpeed), ForceMode2D.Impulse);
                     rbHead.AddForce(-(controllerDir.normalized * bulletSpeed), ForceMode2D.Impulse);
