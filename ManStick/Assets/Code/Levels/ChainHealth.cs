@@ -7,7 +7,7 @@ using static UnityEngine.ParticleSystem;
 
 public class ChainHealth : MonoBehaviour
 {
-    float maxChainHealth = 5;
+    [SerializeField] float maxChainHealth = 5;
     float currChainHealth;
 
 

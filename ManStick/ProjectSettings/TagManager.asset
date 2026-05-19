@@ -10,6 +10,7 @@ TagManager:
   - Body Part
   - Bullets
   - EndPoint
+  - Hazard
   layers:
   - Default
   - TransparentFX

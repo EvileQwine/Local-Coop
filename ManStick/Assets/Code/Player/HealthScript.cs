@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,6 +59,14 @@ public class HealthScript : MonoBehaviour
                 }
                 StartCoroutine(LavaDamageCooldown());
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hazard"))
+        {
+            Hit(1);
         }
     }
 
